@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: hidden-pc-page
+    runtime: static
+    rootDir: frontend
+    buildCommand: corepack enable && corepack prepare pnpm@10.15.1 --activate && pnpm install --no-frozen-lockfile && pnpm run build
+    staticPublishPath: ./dist
